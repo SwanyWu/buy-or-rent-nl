@@ -1,11 +1,15 @@
-// import React from 'react';
 
-function RentForm({ data, handleChange }) {
+function RentForm({ data, handleChange, years, handleYearsChange, handleCashAtHandChange }) {
   return (
     <div className="renting-section">
-      <h2>Renting Inputs</h2>
+      <h2>If I spend it on renting</h2>
       <label>Saving: </label>
-      <input type="number" name="saving" value={data.saving} onChange={handleChange} />
+      <input 
+        type="number" 
+        name="Saving" 
+        value={data.saving} 
+        onChange={handleCashAtHandChange}
+      />
       <br />
       <label>Rent per Year: </label>
       <input type="number" name="rentPerYear" value={data.rentPerYear} onChange={handleChange} />
@@ -14,7 +18,7 @@ function RentForm({ data, handleChange }) {
       <input type="number" name="savingInterestRate" value={data.savingInterestRate} onChange={handleChange} />
       <br />
       <label>Years of Rent: </label>
-      <input type="number" name="yearsOfRent" value={data.yearsOfRent} onChange={handleChange} />
+      <input type="number" value={years} onChange={handleYearsChange} />
     </div>
   );
 }

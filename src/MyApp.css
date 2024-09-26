@@ -31,6 +31,18 @@ h2 {
   margin-bottom: 10px;
 }
 
+.init-text {
+  color: #1b69f0; /* Light teal for subtitle */
+  text-align: center;
+  font-size: 1.2em; /* Slightly larger than normal text */
+  margin-bottom: 30px; /* Space below */
+}
+
+.result-label {
+  width: 150px; /* Adjust this width as needed */
+  text-align: left; /* Align text to the left if desired */
+}
+
 /* Input labels */
 label {
   display: inline-block;
