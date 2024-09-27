@@ -97,9 +97,9 @@ function MyApp() {
   
         {/* Show results table if calculated, otherwise show empty table */}
         {buyResult && rentResult ? (
-          <ResultsTable buyResult={buyResult} rentResult={rentResult} />
+          <ResultsTable years={years} buyResult={buyResult} rentResult={rentResult} />
         ) : (
-          <ResultsTable buyResult={{}} rentResult={{}} />
+          <ResultsTable years={years} buyResult={{}} rentResult={{}} />
         )}
       </div>
   
