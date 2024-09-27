@@ -3,6 +3,8 @@ import BuyForm from './BuyForm';
 import RentForm from './RentForm';
 import ResultsTable from './ResultsTable';
 import './MyApp.css';
+import Footer from './Footer';
+import './Footer.css'; 
 import { calculateBuy, calculateRent } from './calculation';
 
 function MyApp() {
@@ -50,56 +52,62 @@ function MyApp() {
   };
 
   return (
-    <div>
-      <h1>Buy or Rent Calculator (NL)</h1>
-
-      {/* Dynamic display of cash at hand and years */}
-      <div className="init-text">
-        <span>I have €</span>
-        <input 
-          type="number" 
-          value={buyData.downPayment || rentData.saving} 
-          onChange={(e) => {
-            const value = e.target.value;
-            setBuyData({ ...buyData, downPayment: value });
-            setRentData({ ...rentData, saving: value });
-          }} 
-          style={{ width: '190px', margin: '0 5px' }} 
-          placeholder="enter your dispensable cash"
-        />
-        <span> at the moment, in the next </span>
-        <input 
-          type="number" 
-          value={years} 
-          onChange={handleYearsChange} 
-          style={{ width: '30px', margin: '0 5px' }} 
-        />
-        <span> years...</span>
-      </div>
-     
-      {/* forms */}
-      <div className="input-container">
-        <div className="form-container">
-          <BuyForm data={buyData} handleChange={handleBuyInputChange} years={years}/>
+    <div className="app-wrapper">
+      <div className="content">
+        <h1>Buy or Rent Calculator (NL)</h1>
+  
+        {/* Dynamic display of cash at hand and years */}
+        <div className="init-text">
+          <span>I have €</span>
+          <input 
+            type="number" 
+            value={buyData.downPayment || rentData.saving} 
+            onChange={(e) => {
+              const value = e.target.value;
+              setBuyData({ ...buyData, downPayment: value });
+              setRentData({ ...rentData, saving: value });
+            }} 
+            style={{ width: '190px', margin: '0 5px' }} 
+            placeholder="enter your dispensable cash"
+          />
+          <span> at the moment, in the next </span>
+          <input 
+            type="number" 
+            value={years} 
+            onChange={handleYearsChange} 
+            style={{ width: '30px', margin: '0 5px' }} 
+          />
+          <span> years...</span>
         </div>
-        <div className="form-container">
-          <RentForm data={rentData} handleChange={handleRentInputChange} years={years}/>
+  
+        {/* Forms */}
+        <div className="input-container">
+          <div className="form-container">
+            <BuyForm data={buyData} handleChange={handleBuyInputChange} years={years}/>
+          </div>
+          <div className="form-container">
+            <RentForm data={rentData} handleChange={handleRentInputChange} years={years}/>
+          </div>
         </div>
+        
+        {/* Button */}
+        <div className="button-container">
+          <button onClick={handleCalculate} style={{ marginTop: '20px' }}>Calculate</button>
+        </div>
+  
+        {/* Show results table if calculated, otherwise show empty table */}
+        {buyResult && rentResult ? (
+          <ResultsTable buyResult={buyResult} rentResult={rentResult} />
+        ) : (
+          <ResultsTable buyResult={{}} rentResult={{}} />
+        )}
       </div>
-      
-      {/* bottons */}
-      <div className="button-container">
-        <button onClick={handleCalculate} style={{ marginTop: '20px' }}>Calculate</button>
-      </div>
-
-      {buyResult && rentResult && (
-        <ResultsTable buyResult={buyResult} rentResult={rentResult} />
-      )}
-
-      {/* Show example results table with empty content */}
-      <ResultsTable buyResult={buyResult} rentResult={rentResult} />
+  
+        {/* Footer */}
+        <Footer />
     </div>
   );
+  
 }
 
 export default MyApp;

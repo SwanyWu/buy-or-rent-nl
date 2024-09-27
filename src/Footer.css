@@ -1,0 +1,23 @@
+/* Footer styling */
+.footer {
+    background-color: #b2b3b6; /* Dark green background */
+    color: white;
+    padding: 8px;
+    text-align: center;
+    position: fixed;
+    width: 96.5%;
+    bottom: 0;
+  }
+  
+  .footer-links a {
+    color: white;
+    margin: 0 15px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #00ff00; /* Light green hover effect */
+  }
+  

@@ -1,3 +1,17 @@
+/* App wrapper for Flexbox layout
+   this is to avoid overlapping of footer and result table 
+*/
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the app wrapper covers the entire height of the viewport */
+}
+
+/* Content grows to fill available space */
+.content {
+  flex: 1;
+}
+
 /* General styling */
 body {
   font-family: Arial, sans-serif;
@@ -32,7 +46,7 @@ h2 {
 }
 
 .init-text {
-  color: #1b69f0; /* Light teal for subtitle */
+  color: #063ea0; /* Light teal for subtitle */
   text-align: center;
   font-size: 1.2em; /* Slightly larger than normal text */
   margin-bottom: 30px; /* Space below */
@@ -62,8 +76,8 @@ input[type="number"] {
 /* Buttons */
 button {
   padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
+  background-color: #063ea0;
+  color: rgb(242, 247, 246);
   border: none;
   border-radius: 5px;
   cursor: pointer;
