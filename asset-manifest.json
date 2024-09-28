@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/buy-or-rent-nl/static/css/main.a0a4947e.css",
+    "main.js": "/buy-or-rent-nl/static/js/main.51ac63f3.js",
+    "static/media/fa-solid-900.ttf": "/buy-or-rent-nl/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
+    "static/media/fa-brands-400.ttf": "/buy-or-rent-nl/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
+    "static/media/fa-solid-900.woff2": "/buy-or-rent-nl/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
+    "static/media/fa-brands-400.woff2": "/buy-or-rent-nl/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
+    "static/media/fa-regular-400.ttf": "/buy-or-rent-nl/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
+    "static/media/fa-regular-400.woff2": "/buy-or-rent-nl/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
+    "static/media/fa-v4compatibility.ttf": "/buy-or-rent-nl/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
+    "static/media/fa-v4compatibility.woff2": "/buy-or-rent-nl/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
+    "index.html": "/buy-or-rent-nl/index.html",
+    "main.a0a4947e.css.map": "/buy-or-rent-nl/static/css/main.a0a4947e.css.map",
+    "main.51ac63f3.js.map": "/buy-or-rent-nl/static/js/main.51ac63f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0a4947e.css",
+    "static/js/main.51ac63f3.js"
+  ]
+}
