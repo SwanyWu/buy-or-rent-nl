@@ -10,6 +10,7 @@ As a potential property investor, I'm interested in understanding if buying can 
 ```
 npm install (first time)
 npm start
+npm run deploy (for deployment only)
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
