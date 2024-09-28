@@ -132,8 +132,8 @@ tr:nth-child(even) {
 }
 
 .info-popup {
-  position: fixed;
-  top: 230px; /* Adjust this value based on your layout */
+  position: relative;
+  /* top: 230px; Adjust this value based on your layout */
   left: 10; /* Adjust this value to position the popup */
   background-color: #f9f9f9;
   border: 1px solid #ccc;
